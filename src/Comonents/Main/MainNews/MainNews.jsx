@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AiFillStar, AiOutlineEye } from 'react-icons/ai';
 import { BsBookmark, BsShare } from 'react-icons/bs';
 const MainsiglesiglesigleNews = () => {
@@ -44,7 +44,7 @@ const MainsiglesiglesigleNews = () => {
                                         <h2 className="text-gray-800 font-bold text-lg mb-2">{singleNews.title}</h2>
                                         <p className="text-gray-600 text-sm">
                                             {singleNews.details.substring(0, 150)}...
-                                            <span className="text-blue-500 cursor-pointer"> Read More</span>
+                                            <Link to={`/news/${singleNews._id}`}  className="text-blue-500 cursor-pointer"> Read More</Link>
                                         </p>
                                     </div>
 
